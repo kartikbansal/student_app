@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Monospace', Helvetica, Arial, sans-serif;
+  font-size: $m-size;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+input:focus {
+  outline: none;
+}
+
+a, a:active, a:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-size: $font-size-small;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  color: #827ffe;
+}
+
+a:hover {
+  color: #827f;
+}
+
+.msg {
+  font-size: $font-size-small;
+  color: #d11;
+  letter-spacing: 0.5px;
+}
+

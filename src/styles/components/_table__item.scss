@@ -1,0 +1,48 @@
+.table__item {
+  display: inline-block;
+  position: relative;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.table__item:nth-child(1) {
+  @extend .table__item;
+  width: 10%;
+}
+
+.table__item:nth-child(2) {
+  @extend .table__item;
+  width: 50%;
+}
+
+.table__item:nth-child(3) {
+  @extend .table__item;
+  width: 20%;
+}
+
+.table__item:nth-child(4) {
+  @extend .table__item;
+  width: 20%;
+}
+
+.table__item button {
+  position: absolute;
+  right: 0;
+  top: -4px;
+  color: #888;
+  background: none;
+  border: 0;
+  padding: 0;
+  font-size: 22px;
+}
+
+.table__item button:hover {
+  color: #111;
+}
+
+.table__item input {
+  width: 100%;
+  outline: none;  
+  border: 0;
+  padding: 0;
+}

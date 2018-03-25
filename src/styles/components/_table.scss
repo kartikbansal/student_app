@@ -1,0 +1,23 @@
+.table {
+  width: 100%;
+  font-size: 0;
+  margin-top: 25px;
+}
+
+.table__row {
+  font-size: $m-size;
+  padding: 11px 18px;
+  box-shadow: 0px 1px 3px #ddd;
+  margin-bottom: 10px;
+}
+
+.table__head .table__row {
+  @extend .table__row;
+  margin-bottom: 15px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  background: #827ffe;
+  color: #fff;
+}

@@ -1,0 +1,10 @@
+.form {
+  margin: auto;
+  width: 100%;
+  font-size: 0;
+}
+
+.form__err {
+  font-size: $font-size-small;
+  color: #d11;
+}

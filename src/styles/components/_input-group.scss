@@ -1,0 +1,19 @@
+.input-group {
+  display: inline-block;
+  width: 60%;
+  margin-right: 2%;
+}
+
+.input-group:last-of-type {
+  width: 38%;
+  margin-right: 0;
+}
+
+.input-group__label {
+  font-size: $s-size;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  width: 100%;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
