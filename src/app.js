@@ -10,7 +10,14 @@ import './styles/styles.scss';
 
 const initialState = loadState();
 const store = configureStore(rootReducer, initialState);
-store.subscribe(() => saveState(store.getState()));
+store.subscribe(() => {
+  const {
+    students,
+  } = store.getState();
+  saveState({
+    students
+  })
+});
 
 render(
   <Provider store={store}>

@@ -7,4 +7,7 @@
 .form__err {
   font-size: $font-size-small;
   color: #d11;
+  position: absolute;
+  left: 0;
+  top: 110%;
 }

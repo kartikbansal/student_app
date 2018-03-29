@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { titleCase } from '../utils/helpers.js';
 import { editStudentName, editStudentScore } from '../actions/students.js';
 
 class InputInlineEdit extends Component {
@@ -15,9 +16,9 @@ class InputInlineEdit extends Component {
     inputValue = inputValue.trim();
     if(inputValue && inputValue !== this.props.value) {
       if(inputValueType === 'name') 
-        this.props.dispatch(editStudentName(this.props.id, inputValue))
+        this.props.dispatch(editStudentName({id: this.props.id, fullName: titleCase(inputValue)}));
       if(inputValueType === 'score')
-        this.props.dispatch(editStudentScore(this.props.id, inputValue))
+        this.props.dispatch(editStudentScore({id: this.props.id, score: inputValue}));
     }
     this.setState(() => ({ isEditing: false }));
   }

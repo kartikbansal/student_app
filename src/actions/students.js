@@ -1,15 +1,11 @@
-import uuid from "uuid";
-import { titleCase } from '../utils/helpers.js';
+
 
 //ADD STUDENT
-export const addStudent = (name, score) => {
-  name = titleCase(name);
+export const addStudent = (student) => {
   return {
     type: "ADD_STUDENT",
-    student: {
-      id: uuid(),
-      name,
-      score
+    payload: {
+      ...student
     }
   };
 };
@@ -18,25 +14,26 @@ export const addStudent = (name, score) => {
 export const removeStudent = id => {
   return {
     type: "REMOVE_STUDENT",
-    id
+    payload: id
   };
 };
 
 //EDIT STUDENT NAME
-export const editStudentName = (id, name) => {
-  name = titleCase(name);
+export const editStudentName = (updates) => {
   return {
     type: "EDIT_STUDENT_NAME",
-    id,
-    name
+    payload: {
+      ...updates
+    }
   };
 };
 
 //EDIT STUDENT SCORE
-export const editStudentScore = (id, score) => {
+export const editStudentScore = (updates) => {
   return {
     type: "EDIT_STUDENT_SCORE",
-    id,
-    score
+    payload: {
+      ...updates
+    }
   };
 };

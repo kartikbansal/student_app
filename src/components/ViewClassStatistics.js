@@ -2,15 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-const Aux = props => props.children;
-
 const ViewClassStatistics = ({ students }) => (
-  <Aux>
+  <React.Fragment>
     { students.length
       ? <Link to="/stats">View Class Statistics &rarr;</Link>
       : null 
     } 
-  </Aux>
+  </React.Fragment>
 );
 
 const mapStateToProps = (state) => {

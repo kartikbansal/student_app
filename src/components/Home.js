@@ -5,7 +5,9 @@ import ViewClassStatistics from './ViewClassStatistics.js';
 
 const Home = (props) => (
   <div className="container">
-    <AddStudentForm />
+    <div className="box">
+      <AddStudentForm />
+    </div>
     <ViewClassStatistics />
     <StudentList />
   </div>
